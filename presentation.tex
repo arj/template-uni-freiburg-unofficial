@@ -1,0 +1,81 @@
+\documentclass{beamer}
+\usepackage{ngerman}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{theme/beamerthemeALU}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+
+% \usepackage{graphicx}
+% \hypersetup{colorlinks=true,linkcolor=red} 
+
+% to display additional slides with notes
+% \setbeameroption{show notes}
+
+% for second screen option
+% \usepackage{pgfpages}
+% \setbeameroption{show notes on second screen}
+
+% to print handnotes uncomment the following two lines:
+%\usepackage{theme/handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[a4paper,border shrink=5mm]
+
+\begin{document}
+\everymath{\displaystyle}
+
+% to enable title graphic enable this line, make sure the height is not too big
+\titlegraphic{\includegraphics[height=6em]{theme/Uni_Logo-Grundversion_E1_A4_CMYK}}
+
+% to enable your logo on each page, enable this line, width should not be bigger then 4em
+% \logo{\includegraphics[width=4em]{images/iif-logo.jpg}}
+% \logo{\includegraphics[width=4em]{images/imtek.jpg}}
+% to use more than one logo uncomment this line:
+\logo{\includegraphics[width=4em]{images/IIFLogo.png}\\\\\includegraphics[width=4em]{images/IMTEKLogo.png}}
+
+\title[Short title]{Title}
+\subtitle[Short subtitle]{Subtitle}
+\author[Short author]{Author}
+\institute[Short institute]{Institut}
+%\date[\today]{\today}
+\date[Short date]{Date}
+
+% begin titlepage
+% "`normal"' front page template:
+% \setbeamertemplate{title page}[default][rounded=true]
+\makeatletter
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}[plain,label=fp]
+    \advance\textwidth by 3.2em\relax
+    \begin{minipage}{\textwidth}\par%
+      \maketitle
+    \end{minipage}
+    \hspace*{2.5em}%
+\end{frame}
+\makeatother 
+% end titlepage
+%\setbeamertemplate{navigation symbols}[horizontal]
+
+\newcommand{\cfbox}[2]{%
+\colorlet{currentcolor}{.}%
+{\color{#1}%
+\setlength{\fboxrule}{1mm}
+\fbox{\color{currentcolor}#2}}%
+}
+
+\begin{frame}
+    \frametitle{Example}
+
+    \begin{block}{Test}
+        \begin{itemize}
+            \item Some content
+            \item Some other content
+        \end{itemize}
+    \end{block}
+
+    \begin{exampleblock}{Example}
+        Example
+    \end{exampleblock}
+\end{frame}
+
+\end{document}
